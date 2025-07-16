@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #outer{
+        display: flex;
+        border: 10px solid black;
+        padding: 20px;
+        align-items: start;
+        justify-content: center;
+    }
+
+    #mid{
+        display: flex;
+        border: 10px solid black;
+        padding: 20px;
+        align-items: start;
+        /* justify-content: center; */
+    }
+
+    #inner{
+        display: flex;
+        border: 10px solid black;
+        padding: 20px;
+        align-items: start;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div id="outer">
+        Outer
+        <div id="mid">
+            mid
+            <div id="inner">
+                inner
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.getElementById('outer').addEventListener('click',()=>console.log("Outer element has been clicked"),true)
+
+    document.getElementById('mid').addEventListener('click',()=>console.log("middle element has been clicked"),true)
+
+    document.getElementById('inner').addEventListener('click',()=>console.log("inner element has been clicked"),true)
+</script>
+</html>

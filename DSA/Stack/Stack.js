@@ -1,44 +1,39 @@
 class Stack{
     constructor(){
-        this.items = new Array()
+        this.items = []
     }
 
     isEmpty(){
-        return this.items.length===0
+        return this.items.length === 0
     }
 
-    push(element){
-        this.items.push(element)
-        return
+    push(value){
+        this.items.push(value)
     }
-
     pop(){
-        if(this.isEmpty()) return 
+        if(this.isEmpty()) return
         return this.items.pop()
     }
-
     peek(){
         return this.items[this.items.length-1]
     }
     print(){
-        let result = ""
+        console.log('TOP')
         for(let i=this.items.length-1;i>=0;i--){
-           result+=`${this.items[i]}->`
+            console.log(this.items[i])
         }
-        return result + "TOP"
     }
+
+    
 }
 
+
 const stack = new Stack()
-console.log(stack.isEmpty())
-stack.push(1)
-stack.push(2)
-stack.push(3)
-stack.push(4)
-stack.push(5)
-console.log(stack.print())
+stack.push(10)
+stack.push(20)
+stack.push(30)
+stack.push(40)
+stack.push(50)
+stack.print()
+stack.pop()
 console.log(stack.peek())
-console.log(stack.pop());
-console.log(stack.print())
-
-
