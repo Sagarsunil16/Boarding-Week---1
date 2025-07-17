@@ -22,7 +22,7 @@ Difference between single Page and multi-page application
 CSR vs SSR
 Concept of reusability 
 Learn about es6 versions syntaxes
-Arrow functions 
+Arrow functions
 Map
 Destructuring
 Filter
