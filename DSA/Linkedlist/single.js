@@ -100,17 +100,17 @@ class singleLinkedlist {
         return
     }
 
-    reverse(){
-       let prev = null 
-       let curr = this.head
-       while(curr){
-        let nextNode = curr.next
-        curr.next = prev
-        prev = curr
-        curr = nextNode
-       }
-       this.head = prev
-    }
+    // reverse(){
+    //    let prev = null 
+    //    let curr = this.head
+    //    while(curr){
+    //     let nextNode = curr.next
+    //     curr.next = prev
+    //     prev = curr
+    //     curr = nextNode
+    //    }
+    //    this.head = prev
+    // }
 
     hasCycle(){
         let slow = this.head
@@ -140,6 +140,18 @@ class singleLinkedlist {
             }
             curr = curr.next
         }
+    }
+
+    reverse(){
+        let prev = null
+        let curr = this.head
+        while(curr){
+            let nextNode = curr.next
+            curr.next = prev
+            prev = curr
+            curr = nextNode
+        }
+        this.head = prev
     }
 }
 
