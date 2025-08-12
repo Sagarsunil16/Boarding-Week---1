@@ -1,5 +1,5 @@
 function nextGreaterElement(nums){
-    let stack = []
+    let stack = [] //to store indexes
     let result = new Array(nums.length).fill(-1)
 
     for(let i=0;i<nums.length;i++){
@@ -12,7 +12,5 @@ function nextGreaterElement(nums){
     return result
 }
 
-
-
-const nums = [12,1,2,4,21,2,4,211]
-console.log(nextGreaterElement(nums))
+console.log(nextGreaterElement([2, 1, 2, 4, 3]));
+// Output: [4, 2, 4, -1, -1]
